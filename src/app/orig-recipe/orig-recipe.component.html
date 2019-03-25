@@ -1,0 +1,22 @@
+<div>
+  <p>Component Parent</p>
+  <p>
+Flour<input [(ngModel)]="flour"/>
+</p>
+<p>
+Bread Flour<input [(ngModel)]="breadFlour"/>
+</p>
+<p>
+Water<input [(ngModel)]="water"/>
+</p>
+<p>
+Salt<input [(ngModel)]="salt"/>
+</p>
+<p>
+Konsui<input [(ngModel)]="konsui"/>
+</p>
+</div>
+<div>
+<p>Component Child </p>
+<app-recipe [flour]="flour" [breadFlour]="breadFlour" [water]="water" [salt]="salt" [konsui]="konsui" ></app-recipe>
+</div>
