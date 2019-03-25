@@ -7,12 +7,13 @@ import { CopyInputService } from '../copy-input.service';
   templateUrl: './orig-recipe.component.html',
   styleUrls: ['./orig-recipe.component.css']
 })
+ // 50 # bread flour, 10 # all purpose flour, 10 quarts water, 1 # Salt, 2 # konsui
 export class OrigRecipeComponent implements OnInit {
-  flour : number;
-  water : number;
-  konsui : number;
-  salt : number;
-  breadFlour : number;
+  flour : number= 10;
+  water : number = 10;
+  konsui : number = 2;
+  salt : number = 1;
+  breadFlour : number = 50;
   
   constructor(private copyInputService: CopyInputService) { }
 

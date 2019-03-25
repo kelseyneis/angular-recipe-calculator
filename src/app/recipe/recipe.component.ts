@@ -8,7 +8,6 @@ import { Component, OnInit, Input, OnChanges, SimpleChange} from '@angular/core'
 export class RecipeComponent implements OnInit, OnChanges{
 
   constructor() { }
- // 50 # bread flour, 10 # all purpose flour, 10 quarts water, 1 # Salt, 2 # konsui
     @Input() konsui : number;
     @Input() salt : number;
     @Input() breadFlour : number;
@@ -38,7 +37,7 @@ setNewRecipe(val, prop){
     }
     ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
       this.waterWeight = (this.water * 2.09).toFixed(2);
-      this.totalWeight = parseInt(this.flour) + parseInt(this.waterWeight);
+      this.totalWeight = parseInt(this.flour) + parseInt(this.waterWeight) + parseInt(this.breadFlour) + parseInt(this.salt) + parseInt(this.konsui);
       this.flourProp = this.flour / this.totalWeight;
       this.breadFlourProp = this.breadFlour / this.totalWeight;
       this.waterProp = this.waterWeight / this.totalWeight;
